@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.add-student {
+    width: 340px;
+    margin: 0 auto 30px;
+    border: 5px solid #c00;
+    padding: 10px;
+}
+.add-student p {
+    margin-bottom: 15px;
+}
+.add-student label {
+    display: block;
+}
+.add-student input, .add-student select {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #eee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.add-student input[type="submit"] {
+    display: block;
+    width: 120px;
+    margin: auto;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.student-list {
+    width: 500px;
+    margin: auto;
+}
+.student_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+.student_item:nth-child(even) {
+    background-color: #eee;
+}
+.student_item-name {
+    width: 40%;
+    font-size: 18px;
+    font-weight: bold;
+}
+.student_item-age {
+    width: 20%;
+    font-size: 18px;
+}
+.student_item-university {
+    width: 40%;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+/* Всплывающие окна */
+.overlay {
+    display: none;
+    background-color: #1e1e26;
+    opacity: .9;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999
+}
+.popup {
+    display: none;
+    position: relative;
+    width: 360px;
+    padding: 40px;
+    border-radius: 8px;
+    background: #fff;
+    text-align: center;
+    z-index: 9999;
+}
+.popup-close {
+    position: absolute;
+    top: 0;
+    right: -52px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff url('i/bg-close.png') center no-repeat;
+    cursor: pointer;
+}
+.popup-title {
+    margin-bottom: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 39px;
+    color: #1e1e26;
+    text-align: center;
+}
+
+
+/* Форма */
+.form-input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #1e1e26;
+    display: block;
+    margin: 0 auto 15px;
+    outline: none;
+    color: #868686;
+    font-size: 12px;
+    line-height: 38px;
+    text-align: center;
+}
+.form-input.error {
+    color: #f00 !important;
+    border: 1px solid #f00 !important;
+}
+.form-input.valid {
+    border: 1px solid #339e36 !important;
+}
+.form-input:focus {
+    color: #000;
+}
+.form-input::-webkit-input-placeholder {
+    color: #000;
+}
+.form-input::-moz-placeholder {
+    color: #000;
+}
+.form-input:-moz-placeholder {
+    color: #000;
+}
+.form-input:-ms-input-placeholder {
+    color: #000;
+}
+.form-label {
+    position: relative;
+}
+
+.popup-body input[type="submit"] {
+    width: 200px;
+    height: 36px;
+    margin-top: 30px;
+    padding-left: 0;
+    background-color: #4a95d9;
+    border: 1px solid #4a95d9;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+input.hide_input {
+    display: none;
+}
+span.wpcf7-not-valid-tip, div.wpcf7-validation-errors {
+    display: none !important;
+}
+.popup-body input.wpcf7-not-valid {
+    border: 1px solid #c00;
+}
+label.error {
+    position: absolute;
+    top: -16px;
+    left: 0;
+    font: 400 14px/24px 'arial', sans-serif;
+    height: 26px;
+    padding: 0 10px;
+    background: #f3cb1c;
+    box-shadow: 0 1px 2px #8b7308;
+    color: #000;
+}
+label.error:after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 5px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid #f3cb1c;
+}
+
+.popup-thy {
+    position: fixed;
+    top: calc(50% - 160px);
+    left: calc(50% - 200px);
+}
+
